@@ -1,2 +1,13 @@
-<h1>Posts#confirm</h1>
-<p>Find me in app/views/posts/confirm.html.erb</p>
+<% provide(:title, "確認画面") %>
+<h1>確認画面</h1>
+<div class="form-wrapper">
+  <%= form_with(model: @post, local: true) do |form| %>
+    <%= form.hidden_field :content %>
+    <div class="form-group">
+      <p class="form-label">内容</p>
+      <p><%= @post.content %></p>
+    </div>
+    <%= form.submit "投稿", class: "btn btn-primary" %>
+    <%= form.submit "戻る", class: "btn btn-info", name: "back" %>
+  <% end %>
+</div>
