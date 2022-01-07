@@ -2,8 +2,8 @@
   <%= form_with(model: @post, local: true) do |form| %>
     <div class="form-group">
       <%= form.label :content, "内容", class: "form-label" %>
-      <%= form.text_area :content, class: "form-control" %>
+      <%= form.text_area :content, class: "form-control", placeholder: "いまどうしてる？" %>
     </div>
-    <%= form.submit "つぶやく", class: "btn btn-primary" %>
+    <%= form.submit "投稿", class: "btn btn-primary" %>
   <% end %>
 </div>
