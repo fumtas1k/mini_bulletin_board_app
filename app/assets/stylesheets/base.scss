@@ -1,0 +1,20 @@
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.container-all {
+  min-height: 100%;
+  text-align: center;
+  position: relative;
+}
+
+header {
+  height: 50px;
+  width: 100%;
+  background-color: rgba(43, 43, 43, 0.6);
+}
