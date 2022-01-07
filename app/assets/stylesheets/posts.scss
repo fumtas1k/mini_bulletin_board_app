@@ -1,10 +1,8 @@
 article {
   width: 100%;
   margin: 1px auto;
-  font-size: 1.5rem;
   text-align: left;
   overflow-wrap: anywhere;
-  text-decoration: none;
 }
 
 .article-wrapper {
@@ -13,10 +11,9 @@ article {
   border: solid 1px #e4e4e4;
   border-radius: 4px;
   display: flex;
-}
-
-.article-wrapper:hover {
-  background-color: #e4e4e4;
+  &:hover {
+    background-color: #e4e4e4;
+  }
 }
 
 .username {
@@ -25,7 +22,7 @@ article {
 }
 
 .username-e{
-  padding-right: 1.5rem;
+  padding-right: 1rem;
 }
 
 .img-wrapper {
@@ -45,10 +42,13 @@ article {
 .form-wrapper {
   width: 100%;
   padding: 10px;
-  font-size: 2rem;
   text-align: left;
 }
 
 .show-link {
   text-decoration: none;
+  color: #000;
+  &:hover {
+    text-decoration: none;
+  }
 }

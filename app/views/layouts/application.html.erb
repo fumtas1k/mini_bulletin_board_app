@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <title><%= yield(:title) %></title>
     <%= csrf_meta_tags %>
@@ -8,20 +8,44 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <div class="container-all">
-      <header></header>
-      <div class="row">
-        <div class="sidebar col-lg-4 col-md-4"></div>
-        <main class="col-lg-4 col-md-4">
+      <header>
+        <nav class="navbar navbar-dark bg-primary">
+          <div class="container-fluid">
+            <span class="navbar-text">
+              <%= link_to "Mini Bulletin boards", posts_path %>
+            </span>
+            <span class="navbar-link">
+              <%= link_to "つぶやく", new_post_path %>
+            </span>
+          </div>
+        </nav>
+      </header>
+      <div class="row side-main-wrapper">
+        <div class="sidebar col-lg-4 col-md-4 col-sm-4">
+         <div class="link-wrapper">
+            <a href="#" class="sidebar-link">話題を検索</a>
+            <a href="#">通知</a>
+            <a href="#">メッセージ</a>
+            <a href="#">ブックマーク</a>
+            <a href="#">リスト</a>
+            <a href="#">プロフィール</a>
+            <button type="button" class="btn btn-primary" id="new-btn">直接つぶやく</button>
+          </div>
+        </div>
+        <main class="col-lg-8 col-md-8 col-sm-8">
           <div class="container">
             <%= yield %>
           </div>
         </main>
-        <div class="sidebar col-lg-4 col-md-4"></div>
       </div>
-      <footer></footer>
+      <footer>
+        <div class="company-wrapper">
+          <span>有限会社 呟き</span>
+          <span>〒100-0014 東京都千代田区永田町１丁目７−１</span>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
