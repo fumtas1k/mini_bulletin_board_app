@@ -1,0 +1,42 @@
+article {
+  width: 100%;
+  margin: 1px auto;
+  font-size: 1.5rem;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.article-wrapper {
+  width: 100%;
+  padding: 10px;
+  border: solid 1px #e4e4e4;
+  border-radius: 4px;
+  display: flex;
+}
+
+.article-wrapper:hover {
+  background-color: #e4e4e4;
+}
+
+.username {
+  font-weight: bold;
+  padding-right: 0.5rem;
+}
+
+.username-e{
+  padding-right: 1.5rem;
+}
+
+.img-wrapper {
+  width: 80px;
+}
+
+.user-image {
+  width: 50px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}

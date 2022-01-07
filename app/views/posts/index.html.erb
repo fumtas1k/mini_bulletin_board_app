@@ -1,2 +1,21 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<% provide(:title, "mini_bulletin_board") %>
+
+<% @posts.each do |post| %>
+  <article>
+    <div class="article-wrapper">
+      <div class="img-wrapper">
+        <img src="/assets/dummy_user.jpg" alt="dummy user" class="user-image">
+      </div>
+      <div class="post-wrapper">
+        <div class="post-header">
+          <p class="username">ダミーユーザー</p>
+          <p class="username-e">＠dummy_user</p>
+          <p><%= time_ago_in_words(post.created_at) %></p>
+        </div>
+        <p class="content">
+          <%= simple_format(post.content) %>
+        </p>
+      </div>
+    </div>
+  </article>
+<% end %>
