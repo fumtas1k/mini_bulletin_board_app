@@ -7,7 +7,7 @@
       <div class="post-header">
         <span class="username">ダミーユーザー</span>
         <span class="username-e">＠dummy_user</span>
-        <span><%= time_ago_in_words(post.created_at) %></span>
+        <span><%= modified_time_ago_in_words(post.created_at) %></span>
       </div>
       <p class="content">
         <%= simple_format(post.content) %>
