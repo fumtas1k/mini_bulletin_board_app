@@ -1,5 +1,14 @@
 <% provide(:title, "mini_bulletin_board") %>
-
+<% if !notice.nil? %>
+  <% if notice.include?("削除") %>
+    <% alert = "danger" %>
+  <% else %>
+    <% alert = "success" %>
+  <% end %>
+  <div class="alert alert-<%= alert %>">
+    <%= notice %>
+  </div>
+<% end %>
 <% @posts.each do |post| %>
   <a href=<%= post_path(post.id)%> class="show-link">
     <%= render partial: "post", locals: {post: post} %>
