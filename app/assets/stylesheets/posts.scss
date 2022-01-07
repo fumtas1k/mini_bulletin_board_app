@@ -4,6 +4,7 @@ article {
   font-size: 1.5rem;
   text-align: left;
   overflow-wrap: anywhere;
+  text-decoration: none;
 }
 
 .article-wrapper {
@@ -48,6 +49,6 @@ article {
   text-align: left;
 }
 
-textarea {
-  font-size: 10rem;
+.show-link {
+  text-decoration: none;
 }

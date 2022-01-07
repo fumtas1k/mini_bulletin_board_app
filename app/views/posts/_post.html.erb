@@ -1,0 +1,17 @@
+<article>
+  <div class="article-wrapper">
+    <div class="img-wrapper">
+      <img src="/assets/dummy_user.jpg" alt="dummy user" class="user-image">
+    </div>
+    <div class="post-wrapper">
+      <div class="post-header">
+        <span class="username">ダミーユーザー</span>
+        <span class="username-e">＠dummy_user</span>
+        <span><%= time_ago_in_words(post.created_at) %></span>
+      </div>
+      <p class="content">
+        <%= simple_format(post.content) %>
+      </p>
+    </div>
+  </div>
+</article>
