@@ -1,9 +1,17 @@
 module PostsHelper
-  def choose_new_or_edit
-    if ["new", "confirm", "create", "index"].include?(action_name)
+  def choose_new_or_edit(modal)
+    if modal || ["new", "confirm", "create"].include?(action_name)
       confirm_posts_path
     elsif action_name == "edit"
       post_path
+    end
+  end
+
+  def post_new_or_exist(modal, post)
+    if modal
+      Post.new
+    else
+      post
     end
   end
 

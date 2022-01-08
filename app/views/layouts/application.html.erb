@@ -16,7 +16,7 @@
           <div id="close-modal">
             <span>x</span>
           </div>
-          <%= render partial: "form" %>
+          <%= render partial: "form", locals: {modal: true} %>
         </div>
       </div>
       <header>
@@ -40,9 +40,7 @@
             <a href="#">ブックマーク</a>
             <a href="#">リスト</a>
             <a href="#">プロフィール</a>
-            <% if ["/","/posts"].include?(request.path_info) %>
-              <button type="button" class="btn btn-primary" id="new-btn">直接つぶやく</button>
-            <% end %>
+            <button type="button" class="btn btn-primary" id="new-btn">直接つぶやく</button>
           </div>
         </div>
         <main class="col-lg-8 col-md-8 col-sm-8">

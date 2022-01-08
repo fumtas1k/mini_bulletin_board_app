@@ -9,7 +9,7 @@
   </div>
 <% end %>
 <div class="form-wrapper">
-  <%= form_with(model: @post, local: true, url: choose_new_or_edit) do |form| %>
+  <%= form_with(model: post_new_or_exist(modal, @post), local: true, url: choose_new_or_edit(modal)) do |form| %>
     <div class="form-group">
       <%= form.label :content, "つぶやき", class: "form-label" %>
       <%= form.text_area :content, class: "form-control", placeholder: "いまどうしてる？" %>
