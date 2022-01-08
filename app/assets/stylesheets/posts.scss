@@ -6,14 +6,18 @@ article {
 }
 
 .article-wrapper {
-  width: 100%;
   padding: 10px;
   border: solid 1px #e4e4e4;
   border-radius: 4px;
   display: flex;
+  justify-content: flex-start;
   &:hover {
     background-color: #e4e4e4;
   }
+}
+
+.post-wrapper {
+  width: 100%;
 }
 
 .username {
@@ -30,13 +34,25 @@ article {
 }
 
 .user-image {
-  width: 50px;
+  display: block;
+  max-width: 100%;
 }
 
 .post-header {
-  display: flex;
-  align-items: center;
   padding: 10px;
+}
+
+.post-content {
+  padding: 0 10px;
+}
+
+.post-time-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  span {
+    padding-right: 1rem;
+  }
 }
 
 .form-wrapper {

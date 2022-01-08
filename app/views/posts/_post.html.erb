@@ -7,11 +7,21 @@
       <div class="post-header">
         <span class="username">ダミーユーザー</span>
         <span class="username-e">＠dummy_user</span>
-        <span><%= modified_time_ago_in_words(post.created_at) %></span>
+        <% if !show %>
+          <span><%= modified_time_ago_in_words(post.created_at) %></span>
+        <% end %>
       </div>
-      <p class="content">
-        <%= simple_format(post.content) %>
-      </p>
+      <div class="post-content">
+        <%= simple_format(post.content)%>
+      </div>
+      <% if show %>
+        <div class="post-time-wrapper">
+          <span><%= post.created_at %></span>
+          <% if post.created_at != post.updated_at %>
+            <span><%= "編集済" %></span>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </article>

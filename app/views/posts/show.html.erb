@@ -1,6 +1,6 @@
 <% provide(:title, "詳細") %>
 <h1>詳細</h1>
-<%= render partial: @post %>
+<%= render partial: @post, locals: {show: true} %>
 <div class="btn-wrapper">
   <%= link_to "編集", edit_post_path, class: "btn btn-success" %>
   <%= link_to "削除", post_path(@post.id), class: "btn btn-danger", method: :delete, data: {confirm: "本当に削除しますか？"} %>
