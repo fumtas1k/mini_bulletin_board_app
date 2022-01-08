@@ -23,4 +23,9 @@ module PostsHelper
     end
   end
 
+  def strftime_jp(time)
+    time.strftime("%R・%Y年%m月%d日")
+  end
+
+
 end

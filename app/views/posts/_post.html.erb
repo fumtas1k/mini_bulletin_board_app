@@ -16,7 +16,7 @@
       </div>
       <% if show %>
         <div class="post-time-wrapper">
-          <span><%= post.created_at %></span>
+          <span><%= strftime_jp(post.created_at) %></span>
           <% if post.created_at != post.updated_at %>
             <span><%= "編集済" %></span>
           <% end %>
