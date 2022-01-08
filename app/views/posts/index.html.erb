@@ -10,7 +10,7 @@
   </div>
 <% end %>
 <% @posts.each do |post| %>
-  <a href=<%= post_path(post.id)%> class="show-link">
+  <a href=<%= post_path(post.id)%> class="post-show-link">
     <%= render partial: "post", locals: {post: post, show: false} %>
   </a>
 <% end %>
